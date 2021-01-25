@@ -1,0 +1,28 @@
+<mxfile host="app.diagrams.net" modified="2021-01-21T06:44:28.829Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36" etag="8FmAsN3EN-xH_mi23UqT" version="14.2.6" type="github">
+  <diagram id="KIZsjEiZuO_qEF7OGuo9" name="第 1 页">
+    <mxGraphModel dx="1422" dy="706" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="YOhMGn5KMxpTD0j53XXF-4" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="190" width="480" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="YOhMGn5KMxpTD0j53XXF-1" value="主应用" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="80" y="280" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="YOhMGn5KMxpTD0j53XXF-5" value="娃哈哈前端微服务架构&lt;br&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="210" y="510" width="140" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YOhMGn5KMxpTD0j53XXF-6" value="子系统" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="270" y="320" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="YOhMGn5KMxpTD0j53XXF-7" value="子系统" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="270" y="220" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="YOhMGn5KMxpTD0j53XXF-8" value="npm组件库" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="110" width="480" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
