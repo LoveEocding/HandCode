@@ -1,27 +1,10 @@
-var isMatch = function (s, p) {
-    const stackArry = [];
-    let haed, j = 0;
-    for (let i = 0; i < s.length; i++) {
-        if (p[j] !== '*') {
-            stackArry.push(p[j])
-            j++;
-        }
-        if (s[i] !== stackArry[0] && stackArry[0] !== '.') {
-            if (!stackArry.length) return false;
-            i--;
-            stackArry.shift();
-        }
+var maxArea = function (height) {
+    var left = 0;
+    var right = height.length - 1;
+    let max = 0;
+    while (left < right) {
+        max = Math.max(max, (right - left) * (height[right] > height[left] ? height[left++] : height[right--]));
     }
-    for (let j = i; j < p.length; j++) {
-        stackArry.push(p[j])
-    }
-    while (stackArry.length) {
-        haed = stackArry.shift();
-        if (head !== '.' || head !== '*') {
-            return false;
-        }
-    }
-    return true;
 };
 
-console.log(isMatch('aab', 'a'));
+console.log(maxArea([1, 2, 4, 3]));
