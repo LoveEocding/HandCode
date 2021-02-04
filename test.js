@@ -1,24 +1,9 @@
-/**
- * @param {number} n
- * @return {string[]}
- */
-var generateParenthesis = function (n) {
-    const tempArr = []
-    var crcle = function (left, right, s) {
-        if (s.length === 2 * n) {
-            tempArr.push(s);
-            return;
-        }
-        if (left > 0) {
-            crcle(left - 1, right, s + '(');
-        }
-        if (right > left) {
-            crcle(left, right - 1, s + ')');
-        }
+var swapPairs = function (head) {
+    if (!head || !head.next) {
+        return head || head.next;
     }
-    crcle(n, n, '');
-    return tempArr;
+    const a = head;
+    head.next = a;
+    a.next = swapPairs(a.next.next);
+    return head.next;
 };
-
-const list2 = generateParenthesis(1);
-console.log(list2);
