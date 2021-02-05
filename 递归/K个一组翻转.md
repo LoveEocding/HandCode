@@ -1,3 +1,12 @@
+# 链表每K个一组翻转
+
+### 解题思路
+1：分治 先翻转K个 剩余的接着翻转
+2：K个翻转 记录前一下， 每次当前指针 执行前一个指针
+
+### 代码
+
+```javascript
 var reverseKGroup = function (head, k) {
     var copyhead = head;
     var i = 1;
@@ -19,14 +28,4 @@ var reverseKGroup = function (head, k) {
     head.next = reverseKGroup(now, k);
     return before;
 }
-
-
-var data = {
-    val: 1,
-    next: {
-        val: 2,
-        next: null
-    }
-}
-
-console.log(JSON.stringify(reverseKGroup(data, 2)));
+```
