@@ -1,20 +1,21 @@
-var combinationSum = function (candidates, target) {
-    const arr = [];
-    candidates = candidates.sort((a, b) => a - b);
-
-    function fill(val, target, sumarr, charcode) {
-        if (target === 0) {
-            arr.push(sumarr);
-            return;
-        }
-        for (let i = 0, len = candidates.length; i < len; i++) {
-            if (candidates[i] < val) continue;
-            if (candidates[i] > target) break;
-            fill(candidates[i], target - candidates[i], [...sumarr, candidates[i]], charcode + String(candidates[i]).charCodeAt());
+var firstMissingPositive = function (nums) {
+    let n = nums.length;
+    for (let i = 0; i < n; i++) {
+        if (nums[i] > n || nums[i] < 1) {
+            nums[i] = n + 1;
         }
     }
-    fill(0, target, [], 0);
-    return arr;
+    for (let i = 0; i < n; i++) {
+        let j = Math.abs(nums[i]);
+        if (j <= n) {
+            nums[j - 1] = Math.sign(nums[j - 1]) < 0 ? nums[j - 1] : -1 * nums[j - 1];
+        }
+    }
+    for (let i = 0; i <= n; i++) {
+        if (nums[i] > 0) {
+            return i + 1;
+        }
+    }
+    return n + 1;
 };
-
-console.log(combinationSum([2, 7, 6, 3, 5, 1], 9));
+console.log(firstMissingPositive([3, 4, -1, 1]));

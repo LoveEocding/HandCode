@@ -142,5 +142,5 @@ function makeHeap(arr) {
         makeBigHeap(arr, i, arr.length);
     }
 }
-
+// 1 2 3 4 5 6
 console.log(heapSort([5, 4, 3]));
