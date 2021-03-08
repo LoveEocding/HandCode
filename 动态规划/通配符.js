@@ -27,7 +27,7 @@ const isMatch = function (s, p) {
     //设置基础值
     dp[0][0] = true;
     let i = 0;
-    for (let j = 1; j < plen - 1; j++) {
+    for (let j = 1; j <= plen; j++) {
         if (p[j - 1] === '*') {
             dp[i][j] = dp[i][j - 2];
         }
