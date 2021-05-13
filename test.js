@@ -1,11 +1,18 @@
-var findNumberIn2DArray = function (matrix, target) {
-    let a, b = 0;
-    for (let i = 0; i < matrix.length; i++) {
-        for (let j = 0; i < matrix[i].length; j++) {
-            if (matrix[i][j] === target) {
-                return true;
-            }
+var minArray = function (numbers) {
+    const len = numbers.length;
+    let left = 0;
+    let right = len - 1;
+    while (left < right) {
+        let mid = Math.floor((left + right) / 2);
+        if (numbers[mid] < numbers[left]) {
+            right = mid;
+        } else if (numbers[mid] > numbers[right]) {
+            left = mid + 1;
+        } else {
+            right--;
         }
     }
-    return false;
+    return numbers[left];
 };
+
+console.log(minArray([3, 4, 5, 1, 2]));
