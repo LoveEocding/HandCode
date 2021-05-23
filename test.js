@@ -1,30 +1,32 @@
-var movingCount = function (m, n, k) {
-    const board = new Array(m);
-    for (let i = 0; i < board.length; i++) {
-        board[i] = new Array(n).fill(false);
-    }
-    function addSum(a, b) {
-        return Number(a) + Number(b);
-    }
-    function sum(i, j) {
-        const res = Number(String(i).split('').reduce(addSum)) + Number(String(j).split('').reduce(addSum));
-        return res;
-    }
-    function bfs(arr, k) {
-        for (let i = 0; i < arr.length; i++) {
-            const a = arr[i][0];
-            const b = arr[i][1];
+/**
+ * @param {number} n - a positive integer
+ * @return {number}
+ */
+//思考,这个过程就是转换2进制的过程
 
-            if (a >= 0 && a <= m - 1 && b >= 0 && b <= n - 1 && sum(a, b) <= k) {
-                if (board[a][b]) {
-                    continue;
-                }
-                board[a][b] = true;
-                bfs([[a + 1, b], [a, b + 1]], k);
-            }
+var hammingWeight = function(n) {
+    //1 暴力循环一道 用双指针减半
+    n=String(n,2);
+    const len=n.length;
+    let i=0;
+    let j=len-1;
+    let sum=0;
+    while(i<j){
+        if(n[i]==='1'){
+            sum++;
         }
+        if(n[j]==='1'){
+            sum++;
+        }
+        i++;
+        j--;
     }
-    bfs([[0, 0]], k);
-    return board.flat().filter(item => item === true).length;
+    if(i===j){
+        if(n[i]==='1'){
+            sum++;
+        }
+    } 
+    return sum;   
 };
-console.log(movingCount(1, 2, 1));
+
+console.log(hammingWeight(00000000000000000000000000001011));
