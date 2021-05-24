@@ -6,10 +6,29 @@
   如果当前节点没有可以访问的节点出栈.
 */
 
-
+function dfs(arr){
+   const statck=[arr];
+   while(statck.length){
+      const node=statck.pop();
+      console.log(node.val);// 打印
+      for(let i=0;i<node.childNode.length;i++){
+          statck.push(node.childNode(i));
+      }
+   }
+}
 
 /*------ 广度优先搜索法  BFS
  一般解决最短路径问题,从起点开始一层一层访问,每层当中点距离和
  起始距离都相等一旦找到终点就结束
  >> 解题思路 依赖于队列先进先出
 */
+function bsf(arr){
+  const queue=[arr];
+  while(queue.length){
+    const node=shift();
+    console.log(node.val);
+    for(let i=0;i<node.childNode.length;i++){
+       queue.push(node.childNode[i]);
+    }
+  }
+}
