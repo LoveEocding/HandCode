@@ -1,8 +1,6 @@
-function fizzBuzz(num) {
-    if(typeof num !=='number')return false;
-    if(num%3===0&&num%5===0)return fizzbuzz;
-    if(num%3===0)return fizz;
-    if(num%5===0)return buzz;
-    return num; 
- }
-console.log(fizzBuzz(3));
+var isNumber = function(s) {
+   // return /^[+-]?(\d+(\.\d*)?|(\.\d+))(e[+-]?\d+)?$/i.test(s.trim())
+    const exp=/^[+-]?(\d+(\.\d*)?)(e[+-]?\d+)?$/ig;
+    return exp.test(s.trim());
+};
+
