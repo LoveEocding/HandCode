@@ -12,7 +12,10 @@ function dfs(arr){
       const node=statck.pop();
       console.log(node.val);// 打印
       for(let i=0;i<node.childNode.length;i++){
-          statck.push(node.childNode(i));
+          if(node.childNode[i])
+          {
+            statck.push(node.childNode[i]);
+          }
       }
    }
 }
@@ -28,7 +31,10 @@ function bsf(arr){
     const node=shift();
     console.log(node.val);
     for(let i=0;i<node.childNode.length;i++){
-       queue.push(node.childNode[i]);
+       if(node.childNode){
+        queue.push(node.childNode[i]);
+       }
+       
     }
   }
 }
